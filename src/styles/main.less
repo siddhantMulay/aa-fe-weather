@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Teko&display=swap");
+@import "./main.less";
+
+// Common styles
+html,
+body {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 2rem 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+
+#root {
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 2rem 1rem;
+  }
+}

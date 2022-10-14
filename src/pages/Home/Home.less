@@ -1,0 +1,46 @@
+@import "../../styles/variables.less";
+
+.weatherAlign {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "a a a a"
+    "b b b b";
+
+  div:first-child {
+    grid-area: a;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  div:nth-child(2) {
+    border-radius: 0 0 0 var(--radius);
+  }
+
+  div:last-child {
+    border-radius: 0 0 var(--radius) 0;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+}
+
+@media screen and (max-width: 600px) {
+  .weatherAlign {
+    grid-template-areas:
+      "a a"
+      "b b"
+      "b b";
+
+    div:nth-child(2) {
+      border-radius: 0;
+    }
+
+    div:nth-child(4) {
+      border-radius: 0 0 0 var(--radius);
+    }
+  }
+}

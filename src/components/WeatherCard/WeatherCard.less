@@ -1,0 +1,73 @@
+@import "../../styles/variables.less";
+
+.weatherCard {
+  background: var(--primary-color);
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 0;
+
+  &.highlight {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+      "f f"
+      "g h";
+    column-gap: 15px;
+    justify-content: center;
+    max-height: 260px;
+    grid-template-rows: 2fr 1fr 0fr 1fr;
+    padding: 10;
+
+    .day {
+      grid-area: f;
+    }
+
+    .icon {
+      grid-area: g;
+      width: 160px;
+      height: 132px;
+    }
+
+    .tempBlock {
+      grid-area: h;
+      line-height: 1;
+
+      .forecast {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .icon {
+    width: 64px;
+    height: 48px;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .day {
+    font-size: 20px;
+  }
+
+  .temp {
+    font-family: "Teko", sans-serif;
+    font-size: 2.5rem;
+
+    &.highlight {
+      font-size: 4rem;
+    }
+
+    &Block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
